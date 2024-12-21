@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sierra Madre</title>
+    <link rel="stylesheet" href="design.css"> 
+    <style>
+        .teamcontainer{
+            height: 600px; 
+            border-radius: 20px; 
+            background-color: #729238; 
+            padding: 10px; 
+            width: 1200px; 
+            margin: 20px auto; 
+        }
+        #teamcontent{
+            display: flex; 
+            justify-content: center; 
+            padding-top:  50px; 
+        }
+        .teamcontent{
+            width: 100%;
+            border: 2px solid white; 
+            padding: 10px;
+        }
+    
+        .teamicon{
+            width: 100px; height: 100px; border-radius: 50%;
+        }
+        div{
+            a{
+                img{
+                    width: 100px; height: 100px; border-radius: 50%;
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
+    .teamcontainer{
+        width: 95%; /* Adjusts container width */
+    }
+
+    #teamcontent {
+        padding-top: 20px;
+    }
+
+    .teamcontent {
+        flex: 1 1 100%; /* Ensures each content block takes full width */
+        max-width: 100%; /* Removes width limit */
+    }
+
+    .teamimg {
+        width: 80%; /* Scales down images */
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .teamicon {
+        width: 70px;
+        height: 70px; /* Scales down circular icons */
+    }
+
+    a .teamimg {
+        width: 70px;
+        height: 70px;
+    }
+
+    .teamcontent {
+        padding: 5px; /* Reduces padding for smaller screens */
+    }
+}
+      
+
+    </style>
+
+</head>
+
+<body  >
+
+    
+    <header >
+        <ul>
+            <li class="headerlist" >  
+                <a class="headername" href="SIERRA MADRE.html" >Home</a>
+            </li>
+            <li class="headerlist"  > 
+                <a class="headername" href="about.html"  >About</a>
+            </li>
+            <li class="headerlist" >
+            <a  class="headername" href="history.html"  >History</a>
+            </li>
+            <li class="headerlist">
+            <a class="headername" href="attraction.html" >Attraction</a>
+            </li>
+            <li class="headerlist" >  
+            <a class="headername" href="contact.html"  >Contact</a>
+            </li>
+            <li class="headerlist">  
+                <a class="headername" href="Our Team.html"  >Team</a>
+             </li>
+        </ul>
+    </header>
+
+
+
+    <main >
+        <h2 class="h2name"  >
+        POWERPUFFS 
+        </h2>
+    
+        <section class="teamcontainer" >
+            <h1 style="text-align: center;">This page is all about Team Powerpuffs!</h1>
+            <hr></hr>   
+            <div id="teamcontent" >
+                <div class="teamcontent" >
+                    <a href="http://127.0.0.1:3000/HTML/Barrion.html">
+                        <img class="teamimg" src="../IMAGES/BARRION.jpeg" alt="Barrie barrion"  >
+                    </a>
+                    <h2>Barrie Barrion</h2>
+                    <p>Position: Web Developer</p>
+                    <p>Description: I am the Web developer the one who brings life to the design of our website.</p>
+            
+                    <br><br>
+                    <div style="margin-top: 10px;">
+                        <a href="https://www.facebook.com/ray.barrion.3?mibextid=ZbWKwL">
+                            <img class="teamicon" src="../IMAGES/fb.jpg" alt="Facebook" style="width: 30px; height: 30px;">
+                        </a>
+                        <a href="mailto:raybarrie16@gmail.com">
+                            <img class="teamicon" src="../IMAGES/gmail.jpg" alt="Gmail" style="width: 30px; height: 30px;">
+                        </a>
+                        <a href="https://www.instagram.com/ray_brr16?igsh=MTdoZ3FveTUycGlvNw">
+                            <img class="teamicon" src="../IMAGES/ig.jpg" alt="Instagram" style="width: 30px; height: 30px;">
+                        </a>
+                    </div>
+                </div>
+            
+                
+                <div class="teamcontent"  >
+                    <a href="http://127.0.0.1:3000/HTML/Fernandez.html">
+                        <img class="teamimg" src="../IMAGES/FERNANDEZ.jpg" alt="Richmond Fernandez">
+                    </a>
+                    <h2>Richmond Fernandez</h2>
+                    <p>Position: Programmer</p>
+                    <p>Description: I am the Programmer the one who create the code of the website</p>
+                    <br><br>                      
+                    <div style="margin-top: 10px;">
+                        <a href="https://www.facebook.com/richmond.fernandez.58?mibextid=ZbWKwL"><img class="teamicon" src="../IMAGES/fb.jpg" alt="Facebook" style="width: 30px; height: 30px;"></a>
+                        <a href="mailto:richmondfernandez53@gmail.com"><img  class="teamicon" src="../IMAGES/gmail.jpg" alt="Gmail" style="width: 30px; height: 30px;"></a>
+                        <a href="https://www.instagram.com/ign_rich/"><img class="teamicon" src="../IMAGES/ig.jpg" alt="Instagram" style="width: 30px; height: 30px;"></a>
+                    </div>
+                </div>           
+                
+                <div class="teamcontent"  >
+                    <a href="http://127.0.0.1:3000/HTML/Cambronero.html"> 
+                        <img class="teamimg" src="../IMAGES/CAMBRONERO.jpg" alt="Jennamae Cambronero"  >
+                    </a>
+                    <h2>Jenna Mae Cambronero</h2>
+                    <p>Position: Content Creatror</p>
+                    <p>Description: I am the content Creator who provides all the necessary information about the Sierra Madre. </p>
+                        
+                    <div style="margin-top: 10px;">
+                        <a href="https://www.facebook.com/jennamae.cambronero.9?mibextid=ZbWKwL"><img class="teamicon" src="../IMAGES/fb.jpg" alt="Facebook" style="width: 30px; height: 30px;"></a>
+                        <a href="mailto:jennamaecambronero143@gmail.com"><img  class="teamicon" src="../IMAGES/gmail.jpg" alt="Gmail" style="width: 30px; height: 30px;"></a>
+                        <a href="https://www.instagram.com/amethyst__viorel?igsh=MXh3cDliZHpmZXlxZQ"><img class="teamicon" src="../IMAGES/ig.jpg" alt="Instagram" style="width: 30px; height: 30px;"></a>
+                    </div>                 
+                </div>
+                    
+                <div class="teamcontent" >
+                    <a href="http://127.0.0.1:3000/HTML/Garcia.html">
+                        <img class="teamimg" src="../IMAGES/GARCIA.jpg" alt="irish garcia"  >
+                    </a>
+                    <h2>Irish Vera Garcia</h2>
+                    <p>Position: Web Designer</p>
+                    <p>Description: I am the Web designer of this website, who decides the layout and the overall design</p>
+                    <br><br>      
+                    <div style="margin-top: 10px;">
+                        <a href="https://www.facebook.com/hsiriarev?mibextid=ZbWKwL"><img class="teamicon" src="../IMAGES/fb.jpg" alt="Facebook" style="width: 30px; height: 30px;"></a>
+                        <a href="mailto:irishveraanthonygarcia@gmail.com"><img class="teamicon" src="../IMAGES/gmail.jpg" alt="Gmail" style="width: 30px; height: 30px;"></a>
+                        <a href="https://www.instagram.com/m1styb7ue?igsh=MnRzcWQ0eXJ6b2dr"><img class="teamicon" src="../IMAGES/ig.jpg" alt="Instagram" style="width: 30px; height: 30px;"></a>
+                    </div>
+                </div>
+            </div><br><br>
+            <hr></hr>        
+        </section>
+    </main>
+    
+    <footer  >
+        <b>
+            <p class="footer">&copy; 2024 Sierra Madre. All rights reserved.</p>
+        </b>
+    </footer>
+    
+    
+</body>
+</html>
+
+
+
+

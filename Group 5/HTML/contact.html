@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click to Slide Content with Videos</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+    }
+    video {
+      position: absolute;
+ 
+      width: 1200px;
+     
+      object-fit: cover;
+      z-index: -1;
+    }
+    .slider {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    .slider .slide {
+      display: none;
+    }
+    .slider .slide.active {
+      display: block;
+    }
+    .buttons {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+    }
+    .buttons button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .buttons button:hover {
+      background: rgba(255, 255, 255, 0.7);
+      color: black;
+    }
+    p {
+      color: blue;
+    }
+ 
+  </style>
+  
+</head>
+<body>
+  <div class="container">
+    <!-- Video Elements -->
+    <video id="video1"  width="1200" autoplay loop muted>
+      <source src="Contact,VidPic/1.mp4"  type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video id="video2" autoplay loop muted style="display: none;">
+      <source src="Contact,VidPic/2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video id="video3" autoplay loop muted style="display: none;">
+      <source src="video3.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video id="video4" autoplay loop muted style="display: none;">
+      <source src="video4.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video id="video5" autoplay loop muted style="display: none;">
+      <source src="video5.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video id="video6" autoplay loop muted style="display: none;">
+      <source src="video6.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video id="video7" autoplay loop muted style="display: none;">
+      <source src="video7.mp4" type="video/mp4">
+   
+    </video>
+    <video id="video8" autoplay loop muted style="display: none;">
+      <source src="video8.mp4" type="video/mp4">
+      
+    </video>
+
+    <!-- Slides -->
+    <div class="slider">
+      <div class="slide active"><p>Slide 1 Content</p></div>
+      <div class="slide"><p>Slide 2 Content</p></div>
+      <div class="slide"><p>Slide 3 Content</p></div>
+      <div class="slide"><p>Slide 4 Content</p></div>
+      <div class="slide"><p>Slide 5 Content</p></div>
+      <div class="slide"><p>Slide 6 Content</p></div>
+      <div class="slide"><p>Slide 7 Content</p></div>
+      <div class="slide"><p>Slide 8 Content</p></div>
+    </div>
+
+
+    <div class="buttons">
+      <button id="prev">Previous</button>
+      <button id="next">Next</button>
+    </div>
+  </div>
+
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const videos = document.querySelectorAll('video');
+    const nextBtn = document.getElementById('next');
+    const prevBtn = document.getElementById('prev');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+      videos.forEach((video, i) => {
+        video.style.display = i === index ? 'block' : 'none';
+      });
+    }
+
+    nextBtn.addEventListener('click', () => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    });
+
+    prevBtn.addEventListener('click', () => {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    });
+
+    // Initialize the first slide and video as active
+    showSlide(currentSlide);
+  </script>
+</body>
+</html>
